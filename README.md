@@ -52,3 +52,8 @@ make dashboard-auto METRICS="cpu,memory,disk" NAME="ci_dashboard_2025_10_17"
   - make down
   - make clean ( stop and removes volumes )
 
+### 4. Grafana Dashboard ( CPU Usage % )
+
+![CPU Dashboard](./screenshots/cpu_dashboard.png)
+
+
