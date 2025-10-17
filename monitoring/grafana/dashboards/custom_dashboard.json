@@ -1,10 +1,9 @@
 {
   "id": null,
-  "uid": "cpu-usage-dashboard",
-  "title": "CPU Usage Dashboard",
+  "uid": "custom-dashboard",
+  "title": "Custom Monitoring Dashboard",
   "tags": [
     "observability",
-    "cpu",
     "prometheus"
   ],
   "timezone": "browser",
