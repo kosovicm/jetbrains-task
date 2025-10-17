@@ -1,6 +1,6 @@
-# Grafana Dashboard Generator — Internship Project
+# Grafana Dashboard Generator
 
-This project automates the creation of Grafana dashboards with Docker, Python, and Makefile orchestration. It supports both **interactive manual usage** and **CI/CD automated workflows**, demonstrating best practices in scripting, environment management, and reproducible deployments.
+This project automates the creation of Grafana dashboards with Docker, Python, and Makefile orchestration. It supports both **interactive manual usage** and **CI/CD automated workflows**.
 
 ---
 
@@ -32,10 +32,23 @@ Run the interactive generator — the script will ask which metrics to include:
 
 ```bash
 make dashboard
-
+```
 ### 2. Automated / CI/CD Mode
 
 Use this in CI pipelines or scripts (no interactive prompts). Provide required `METRICS` and optional `NAME`:
+ - METRICS (required): comma-separated metric keys
+
+ - NAME (optional): desired JSON filename; if omitted, a unique timestamped file is created
+
+   This allows dashboards to be generated automatically in CI/CD pipelines without manual input
 
 ```bash
 make dashboard-auto METRICS="cpu,memory,disk" NAME="ci_dashboard_2025_10_17"
+```
+
+### 3. Start/Stop/Clean Environment
+
+  - make up
+  - make down
+  - make clean ( stop and removes volumes )
+
